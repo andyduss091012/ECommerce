@@ -1,17 +1,14 @@
 ﻿namespace ECommerce.Models;
 
-public class Category
+public class Category : BaseEntity
 {
     #region [ CTor ]
-    public Category() {
-        Id = Guid.NewGuid().ToString();
+    public Category() : base() {
         Products = new List<Product>();
     }
     #endregion
 
     #region [ Properties ]
-    public string Id { get; set; }
-
     public string? Name { get; set; }
 
     public ICollection<Product>? Products { get; set; }

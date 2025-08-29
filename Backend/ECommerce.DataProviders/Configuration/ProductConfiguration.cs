@@ -27,7 +27,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
                .HasColumnType("decimal(18,2)")
                .IsRequired();
 
-        builder.Property(p => p.Stock)
+        builder.Property(p => p.StockQuantity)
                .HasColumnType("int")
                .HasDefaultValue(0);
 
